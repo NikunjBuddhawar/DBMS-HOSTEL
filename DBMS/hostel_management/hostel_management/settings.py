@@ -51,12 +51,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'hostel_management.urls'
+import os
+
 
 TEMPLATES = [
-    {
+   {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],  # Optional if templates are in the root directory
-        'APP_DIRS': True,  # Ensures templates from app directories are found
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Add this line if not present
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -117,6 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

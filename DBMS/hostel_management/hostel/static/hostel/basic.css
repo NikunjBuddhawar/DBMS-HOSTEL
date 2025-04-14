@@ -11,69 +11,80 @@ body {
     background: linear-gradient(to right, #ff7e5f, #feb47b);  /* Gradient background */
 }
 
-/* Success container styling */
-.container {
+/* Form container styling */
+.form-container {
     width: 100%;
     max-width: 500px;
     margin: 50px auto;
     padding: 30px;
-    background-color: #ffffff;  /* White background for success message */
+    background-color: #ffffff;  /* White background for form */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
     text-align: center;
     animation: fadeIn 1.5s ease-out;  /* Fade-in animation */
 }
 
-/* Heading for success message */
+/* Heading */
 h2 {
     font-size: 2rem;
-    color: #333;  /* Dark gray */
+    color: #333;  /* Dark gray for the title */
     margin-bottom: 20px;
 }
 
-/* Success message text */
-p {
-    font-size: 1.2rem;
-    color: #555;  /* Medium gray for the message */
-    margin-bottom: 30px;
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* Button to go back to booking */
-a {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #4CAF50;  /* Green background for go-back button */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+form input, form select, form button {
+    padding: 12px;
+    border: 1px solid #ddd;  /* Light border */
+    border-radius: 4px;
     font-size: 1rem;
+    color: #333;
+}
+
+/* Focus styles */
+form input:focus, form select:focus {
+    outline: none;
+    border-color: #4CAF50;  /* Green border on focus */
+}
+
+/* Submit button styling */
+button {
+    background-color: #4CAF50;  /* Green background for submit button */
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-a:hover {
+button:hover {
     background-color: #45a049;  /* Slightly darker green on hover */
 }
 
-/* Logout button container */
-.logout-button {
-    margin-top: 30px;
-    text-align: center; /* Centering the logout button */
+button:focus {
+    outline: none;
 }
 
-/* Styling for the logout button */
-.logout-button a {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #f44336;  /* Red background for logout button */
-    color: white;
+/* Link styling */
+a {
+    color: #4CAF50;  /* Green color for links */
     text-decoration: none;
-    border-radius: 5px;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
 }
 
-.logout-button a:hover {
-    background-color: #d32f2f;  /* Darker red on hover */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Error handling */
+script {
+    color: #f44336; /* Red text for errors */
 }
 
 /* Animation for fade-in */

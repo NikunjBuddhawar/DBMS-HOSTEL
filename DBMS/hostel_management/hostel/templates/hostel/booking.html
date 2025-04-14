@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'hostel/booking.css' %}">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Booking Form</h2>
+
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    {% if error %}
+        <script>
+            alert("{{ error }}");
+        </script>
+    {% endif %}
+
+</body>
+</html>

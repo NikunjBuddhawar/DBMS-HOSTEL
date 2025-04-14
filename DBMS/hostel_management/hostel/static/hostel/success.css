@@ -1,0 +1,60 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa; /* Lighter, softer background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 40px 50px; /* Slightly larger padding for spacious feel */
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    text-align: center;
+    width: 100%;
+    max-width: 450px; /* Ensuring a fixed width */
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-10px); /* Subtle hover effect for the container */
+}
+
+h2 {
+    color: #28a745; /* Brighter green for success */
+    margin-bottom: 20px; /* Increased margin for better spacing */
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 30px; /* Increased margin for better spacing */
+}
+
+a {
+    display: inline-block;
+    padding: 12px 25px; /* Larger padding for better click area */
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px; /* Rounded button for a modern look */
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Button grows on hover */
+}
+
+a:active {
+    transform: scale(1); /* Resets scale on click */
+}
